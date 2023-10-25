@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service
 
 @Service
-open class CustomUserDetailService(val userRepository: UserRepository) : UserDetailsService {
+class CustomUserDetailService(val userRepository: UserRepository) : UserDetailsService {
     override fun loadUserByUsername(username: String?): UserDetails {
 
         TODO("Not yet implemented")
