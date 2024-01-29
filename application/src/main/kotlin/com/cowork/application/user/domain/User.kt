@@ -9,6 +9,6 @@ class User(
         @Column(name = "PASSWORD", nullable = false) var password: String,
         @Column(name = "NAME", nullable = false) var name: String,
         @Column(name = "PHONE", nullable = false) var phone: String,
-        @Column(name = "ROLES", nullable = false) var roles: String,
+        @Column(name = "ROLES", nullable = false) var roles: MutableSet<Role>,
         @ManyToOne(fetch = FetchType.LAZY) @JoinColumn(name = "COMPANY_ID") var company: Company
 )
